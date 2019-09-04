@@ -27,13 +27,13 @@ class StringTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DDString.allFonts.count
+        return DDString.allStrings.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stringsCell", for: indexPath) as! StringsViewCell
         
-        let string = DDString.allFonts[indexPath.row]
+        let string = DDString.allStrings[indexPath.row]
         
         cell.keyLabel.text = string.0
         cell.stringLabel.text = string.1

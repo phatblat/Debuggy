@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct DDString {
-    static let allFonts = [
+    static let allStrings = [
         ("Main", String.main),
         ("Debug", String.debug),
         ("Main View Description", String.mainViewDescription),
