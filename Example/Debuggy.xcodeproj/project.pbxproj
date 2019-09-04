@@ -15,9 +15,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AF8EFF97B4D9AA7D5F935816 /* Pods_Debuggy_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D7B52F5C215EF18F59D25 /* Pods_Debuggy_Tests.framework */; };
-		F83AE34B231F5CFF0094DBC8 /* DDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83AE348231F5CFE0094DBC8 /* DDStyle.swift */; };
-		F83AE34C231F5CFF0094DBC8 /* DDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83AE349231F5CFF0094DBC8 /* DDColor.swift */; };
-		F83AE34D231F5CFF0094DBC8 /* DDString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83AE34A231F5CFF0094DBC8 /* DDString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +47,6 @@
 		AB4966F1C4DB54CD4C6800AE /* Pods-Debuggy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debuggy_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Debuggy_Tests/Pods-Debuggy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBCC691AE882AD2923609704 /* Pods-Debuggy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debuggy_Example.debug.xcconfig"; path = "Target Support Files/Pods-Debuggy_Example/Pods-Debuggy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C7925E3D7BE709194D1AAF73 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F83AE348231F5CFE0094DBC8 /* DDStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDStyle.swift; sourceTree = "<group>"; };
-		F83AE349231F5CFF0094DBC8 /* DDColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDColor.swift; sourceTree = "<group>"; };
-		F83AE34A231F5CFF0094DBC8 /* DDString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +102,6 @@
 		607FACD21AFB9204008FA782 /* Example for Debuggy */ = {
 			isa = PBXGroup;
 			children = (
-				F83AE349231F5CFF0094DBC8 /* DDColor.swift */,
-				F83AE34A231F5CFF0094DBC8 /* DDString.swift */,
-				F83AE348231F5CFE0094DBC8 /* DDStyle.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -366,9 +357,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				F83AE34D231F5CFF0094DBC8 /* DDString.swift in Sources */,
-				F83AE34B231F5CFF0094DBC8 /* DDStyle.swift in Sources */,
-				F83AE34C231F5CFF0094DBC8 /* DDColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
