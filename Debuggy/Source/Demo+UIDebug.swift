@@ -42,18 +42,18 @@ enum DemoUIDebug: UIDebuggable, CaseIterable {
     }
 }
 
-enum DebugDemoUseCase: DebugUseCasable {
+public enum DebugDemoUseCase: DebugUseCasable {
     case none
     case redBackground
     
-    var name: String {
+    public var name: String {
         switch self {
         case .none: return .none
         case .redBackground: return .redBackground
         }
     }
     
-    var useCaseDescription: String {
+    public var useCaseDescription: String {
         switch self {
         case .none: return .none
         case .redBackground: return .redBackground

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class DebugTableViewController: UITableViewController {
-    
+public class DebugTableViewController: UITableViewController {
+
     lazy var list: [(String, UIViewController)] = {
         return [(String.styleGuide, DebugUXStyleTableViewController()),
                 (String.strings, StringTableViewController()),
@@ -17,7 +17,7 @@ class DebugTableViewController: UITableViewController {
                 ]
     }()
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = .hiddenDebug
@@ -27,15 +27,15 @@ class DebugTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         let item = list[indexPath.row]
@@ -44,8 +44,8 @@ class DebugTableViewController: UITableViewController {
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let item = list[indexPath.row]

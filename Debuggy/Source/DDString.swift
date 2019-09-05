@@ -39,7 +39,7 @@ extension String {
 }
 
 // MARK: - Static Text Strings
-extension String {
+public extension String {
     static let main = "Main".localized
     static let debug = "Debug".localized
     static let mainViewDescription = "This Controller is the main controller of the app".localized
