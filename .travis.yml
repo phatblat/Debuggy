@@ -15,5 +15,6 @@ script:
   -workspace Example/Debuggy.xcworkspace
   -scheme Debuggy-Example
   -sdk iphonesimulator13.0
+  -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=latest'
   -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
