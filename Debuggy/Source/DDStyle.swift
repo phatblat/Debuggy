@@ -67,7 +67,13 @@ extension UIFont {
 extension UINavigationBar {
     
     func applyGrayStyle() {
-        UIApplication.shared.statusBarStyle = .default
+        // Deprecated
+        //UIApplication.shared.statusBarStyle = .default
+
+        // Read-only
+        //UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarStyle = .default
+        // To customize the status bar's style for each of your view controllers, override their preferredStatusBarStyle property.
+
         isTranslucent = false
         barTintColor = DDColor.grayLightest
         tintColor = DDColor.action
