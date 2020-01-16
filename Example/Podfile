@@ -7,8 +7,8 @@ target 'Debuggy_Example' do
   target 'Debuggy_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 2.1.0'
-    pod 'Nimble', '~> 8.0.1'
+    pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~> 8.0.5'
     pod 'Nimble-Snapshots' , '~> 8.0.0'
   end
 end
