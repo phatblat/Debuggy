@@ -1,9 +1,10 @@
 # references:
 # - https://docs.travis-ci.com/user/reference/osx
+# - https://docs.travis-ci.com/user/languages/objective-c/
 # - https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode11
-language: objective-c
+osx_image: xcode11.3
+language: swift
 cache: cocoapods
 podfile: Example/Podfile
 before_install:
@@ -15,6 +16,6 @@ script:
   -workspace Example/Debuggy.xcworkspace
   -scheme Debuggy-Example
   -sdk iphonesimulator13.0
-  -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=latest'
+  -destination 'platform=iOS Simulator,name=iPhone 8,OS=latest'
   -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
