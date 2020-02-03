@@ -18,11 +18,11 @@ class DebugUXStyleTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 70.0
         tableView.estimatedSectionHeaderHeight = 38
-        
-        tableView.register(UINib(nibName: "ColorViewCell", bundle: nil), forCellReuseIdentifier: "colorCell")
-        tableView.register(UINib(nibName: "FontViewCell", bundle: nil), forCellReuseIdentifier: "fontCell")
+
+        tableView.register(UINib(nibName: "ColorViewCell", bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "colorCell")
+        tableView.register(UINib(nibName: "FontViewCell", bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "fontCell")
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

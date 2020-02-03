@@ -50,8 +50,8 @@ class UIDebugClassListViewController: UIViewController {
 
         setupSearchController()
 
-        tableView.register(UINib(nibName: "ColorViewCell", bundle: nil), forCellReuseIdentifier: "colorCell")
-        tableView.register(UINib(nibName: "FontViewCell", bundle: nil), forCellReuseIdentifier: "fontCell")
+        tableView.register(UINib(nibName: "ColorViewCell", bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "colorCell")
+        tableView.register(UINib(nibName: "FontViewCell", bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "fontCell")
 
         setup(for: tableType)
 
@@ -112,8 +112,7 @@ class UIDebugClassListViewController: UIViewController {
         if debugItem.classType is UITableViewCell.Type {
             for item in debugItem.list {
                 if let objectClass = NSClassFromString(item) as? InitCellable.Type {
-                    //self.tableView.register(UINib(nibName: item, bundle: nil), forCellReuseIdentifier: "colorCell")
-                    print("class name is \(String(describing: objectClass))")
+                    tableView.register(UINib(nibName: item, bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "colorCell")
                 }
             }
         }

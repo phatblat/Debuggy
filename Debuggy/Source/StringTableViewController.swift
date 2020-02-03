@@ -17,7 +17,7 @@ class StringTableViewController: UITableViewController {
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
-        tableView.register(UINib(nibName: "StringsViewCell", bundle: nil), forCellReuseIdentifier: "stringsCell")
+        tableView.register(UINib(nibName: "StringsViewCell", bundle: Bundle.resources(for: self)), forCellReuseIdentifier: "stringsCell")
     }
 
     // MARK: - Table view data source
