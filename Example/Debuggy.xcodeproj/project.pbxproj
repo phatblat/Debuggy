@@ -12,8 +12,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AF8EFF97B4D9AA7D5F935816 /* Pods_Debuggy_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184D7B52F5C215EF18F59D25 /* Pods_Debuggy_Tests.framework */; };
+		F89CFD9723E86D76005AD7DE /* TestCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89CFD9623E86D76005AD7DE /* TestCartViewController.swift */; };
+		F89CFD9D23E86DB4005AD7DE /* TestCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F89CFD9A23E86DB4005AD7DE /* TestCartViewController.xib */; };
+		F89CFDA023E86DE1005AD7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89CFD9E23E86DE1005AD7DE /* LaunchScreen.storyboard */; };
 		F8D2B2302320A7B300EB503A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D2B22F2320A7B300EB503A /* MainViewController.swift */; };
-		F8D2B2322320A7F700EB503A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D2B2312320A7F700EB503A /* LaunchScreen.storyboard */; };
 		F8D2B2342320B31800EB503A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D2B2332320B31800EB503A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +46,10 @@
 		AB4966F1C4DB54CD4C6800AE /* Pods-Debuggy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debuggy_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Debuggy_Tests/Pods-Debuggy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBCC691AE882AD2923609704 /* Pods-Debuggy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Debuggy_Example.debug.xcconfig"; path = "Target Support Files/Pods-Debuggy_Example/Pods-Debuggy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C7925E3D7BE709194D1AAF73 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F89CFD9623E86D76005AD7DE /* TestCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCartViewController.swift; sourceTree = "<group>"; };
+		F89CFD9B23E86DB4005AD7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TestCartViewController.xib; sourceTree = "<group>"; };
+		F89CFD9F23E86DE1005AD7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D2B22F2320A7B300EB503A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		F8D2B2312320A7F700EB503A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D2B2332320B31800EB503A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,11 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				F8D2B22F2320A7B300EB503A /* MainViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				F8D2B2312320A7F700EB503A /* LaunchScreen.storyboard */,
 				F8D2B2332320B31800EB503A /* Assets.xcassets */,
+				F89CFD9E23E86DE1005AD7DE /* LaunchScreen.storyboard */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				F8D2B22F2320A7B300EB503A /* MainViewController.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				F89CFD9623E86D76005AD7DE /* TestCartViewController.swift */,
+				F89CFD9A23E86DB4005AD7DE /* TestCartViewController.xib */,
 			);
 			name = "Example for Debuggy";
 			path = Debuggy;
@@ -246,8 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89CFD9D23E86DB4005AD7DE /* TestCartViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				F8D2B2322320A7F700EB503A /* LaunchScreen.storyboard in Resources */,
+				F89CFDA023E86DE1005AD7DE /* LaunchScreen.storyboard in Resources */,
 				F8D2B2342320B31800EB503A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F89CFD9723E86D76005AD7DE /* TestCartViewController.swift in Sources */,
 				F8D2B2302320A7B300EB503A /* MainViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -385,6 +393,22 @@
 				607FACDA1AFB9204008FA782 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F89CFD9A23E86DB4005AD7DE /* TestCartViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89CFD9B23E86DB4005AD7DE /* Base */,
+			);
+			name = TestCartViewController.xib;
+			sourceTree = "<group>";
+		};
+		F89CFD9E23E86DE1005AD7DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F89CFD9F23E86DE1005AD7DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
