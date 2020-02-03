@@ -28,7 +28,7 @@ struct DDStyle {
         ("Caption", DDStyle.captionFont),
         ("Caption (bold)", DDStyle.boldCaptionFont),
     ]
-    
+
     static let title1Font = UIFont.systemFont(ofSize: 28, weight: UIFont.Weight.heavy)
     static let title2Font = UIFont.systemFont(ofSize: 22)
     static let title3Font = UIFont.systemFont(ofSize: 20)
@@ -48,24 +48,24 @@ struct DDStyle {
 }
 
 extension UIFont {
-    
+
     func with(traits: UIFontDescriptor.SymbolicTraits...) -> UIFont {
         if let descriptor = fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits)) {
             return UIFont(descriptor: descriptor, size: 0)
         }
         return self
     }
-    
+
     func boldItalic() -> UIFont {
         return with(traits: .traitBold, .traitItalic)
     }
-    
+
     func italic() -> UIFont {
         return with(traits: .traitItalic)
     }
 }
 extension UINavigationBar {
-    
+
     func applyGrayStyle() {
         // Deprecated
         //UIApplication.shared.statusBarStyle = .default
@@ -78,14 +78,14 @@ extension UINavigationBar {
         barTintColor = DDColor.grayLightest
         tintColor = DDColor.action
         backgroundColor = nil
-        
+
         let navBarTitleTextAttributes = [NSAttributedString.Key.foregroundColor: DDColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.semibold)]
         titleTextAttributes = navBarTitleTextAttributes
     }
 }
 
 extension UIButton {
-    
+
     func applyPrimaryActionButtonStyle() {
         layer.cornerRadius = 8
         backgroundColor = DDColor.action
@@ -93,7 +93,7 @@ extension UIButton {
         titleLabel?.font = DDStyle.headlineFont
         clipsToBounds = true
     }
-    
+
     func applyHollowPrimaryActionButtonStyle() {
         layer.cornerRadius = 8
         backgroundColor = UIColor.clear
@@ -103,26 +103,26 @@ extension UIButton {
         titleLabel?.font = DDStyle.headlineFont
         clipsToBounds = true
     }
-    
+
     func applySecondaryActionButtonStyle() {
         setTitleColor(DDColor.action, for: .normal)
         titleLabel?.font = DDStyle.bodyFont
     }
-    
+
     func applyFootnoteActionButtonStyle() {
         setTitleColor(DDColor.action, for: .normal)
         titleLabel?.font = DDStyle.footnoteActionFont
     }
-    
+
     func applyDestructiveButtonStyle() {
         setTitleColor(DDColor.actionDestructive, for: .normal)
         titleLabel?.font = DDStyle.bodyFont
     }
-    
+
 }
 
 extension UITextView {
-    
+
     func applyStyle(_ font: UIFont, _ color: UIColor) {
         self.font = font
         textColor = color
@@ -130,22 +130,22 @@ extension UITextView {
 }
 
 extension UILabel {
-    
+
     func applyStyle(_ font: UIFont, _ color: UIColor) {
         self.font = font
         textColor = color
     }
-    
+
     func applyHeaderStyle() {
         font = DDStyle.subheadFont
         textColor = DDColor.grayDark
     }
-    
+
     func applyFootnoteStyle() {
         font = DDStyle.footnoteFont
         textColor = DDColor.gray
     }
-    
+
     func applyRoundUnSelectedStyle() {
         textColor = UIColor.black
         layer.cornerRadius = frame.width / 2
@@ -154,7 +154,7 @@ extension UILabel {
         layer.backgroundColor = UIColor.white.cgColor
         layer.borderColor = DDColor.action.cgColor
     }
-    
+
     func applyRoundSelectedStyle() {
         textColor = UIColor.white
         layer.cornerRadius = frame.width / 2
@@ -164,4 +164,3 @@ extension UILabel {
         layer.borderColor = UIColor.black.cgColor
     }
 }
-

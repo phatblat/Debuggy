@@ -17,12 +17,12 @@ class MainViewController: UIViewController {
         self.title = "Main" //.main
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Debug", style: .done, target: self, action: #selector(showDebug))
-        
+
         let centerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 22))
         centerLabel.text = "MainViewController"
         centerLabel.textAlignment = .center
         centerLabel.center = view.center
-        
+
         view.addSubview(centerLabel)
     }
 }
@@ -38,14 +38,14 @@ extension MainViewController: DebugControllerInstantiable {
     static var debugDescription: String {
         return String.mainViewDescription
     }
-    
+
     static func getUseCases() -> [DebugUseCasable] {
         return [DebugDemoUseCase.none, DebugDemoUseCase.redBackground]
     }
-    
+
     static func initController(with useCase: DebugUseCasable?) -> UIViewController {
         let vc = MainViewController()
-        
+
         if let useCase = useCase as? DebugDemoUseCase {
             switch useCase {
             case .redBackground:
@@ -53,7 +53,7 @@ extension MainViewController: DebugControllerInstantiable {
             default: break
             }
         }
-        
+
         return vc
     }
 }

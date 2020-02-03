@@ -13,7 +13,7 @@ class ColorViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var colorView: UIView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,15 +23,15 @@ class ColorViewCell: UITableViewCell {
 extension ColorViewCell: DebugCellInstantiable {
     static func initCell(for tableView: UITableView, with useCase: DebugUseCasable?, on indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath) as! ColorViewCell
-        
+
         guard let color = DDColor.allColors.first else {
             return cell
         }
-        
+
         cell.nameLabel.text = color.0
         cell.hexLabel.text = color.1.hexString()
         cell.colorView.backgroundColor = color.1
-        
+
         return cell
     }
 }

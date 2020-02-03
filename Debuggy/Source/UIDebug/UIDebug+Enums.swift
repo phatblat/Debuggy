@@ -20,7 +20,7 @@ enum DebugTableType: CaseIterable {
     case classList
     case classSectionList
     case classDetail
-    
+
     var title: String {
         switch self {
         case .bundleList: return "Bundle Class List"
@@ -29,7 +29,7 @@ enum DebugTableType: CaseIterable {
         case .classDetail: return "Class Detail"
         }
     }
-    
+
     var tableStyle: UITableView.Style {
         switch self {
         case .classDetail, .classSectionList: return .grouped

@@ -31,7 +31,7 @@ extension String {
     var localized: String {
         return localized(comment: "")
     }
-    
+
     func localized(comment: String = "") -> String {
         let translatedString = NSLocalizedString(self, comment: comment)
         return translatedString

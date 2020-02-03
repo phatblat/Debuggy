@@ -20,12 +20,12 @@ public extension Bundle {
         guard let bundlePath = self.executablePath else {
             return []
         }
-        
+
         var anyClasses: [String] = []
         var size: UInt32 = 0
-        
+
         let classes = objc_copyClassNamesForImage(bundlePath, &size)
-        
+
         for index in 0..<size {
             if let className = classes?[Int(index)],
                 let name = NSString(utf8String: className) as String? {
@@ -34,7 +34,7 @@ public extension Bundle {
                 }
             }
         }
-        
+
         return anyClasses
     }
 }
