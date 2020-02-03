@@ -10,6 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+/// Displays classes found in main bundle which extend a given UIKit class.
 class UIDebugClassCollectionViewController: UIViewController {
 
     var debugItem: UIDebuggable!

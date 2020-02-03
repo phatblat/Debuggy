@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// <#Description#>
 public protocol UIDebuggable {
     var displayName: String { get }
     var bundle: Bundle { get }

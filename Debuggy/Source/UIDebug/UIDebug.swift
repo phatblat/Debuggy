@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Container for static functions.
 struct UIDebug {
     static func instantiateController(named name: String, with useCase: DebugUseCasable? = nil) -> UIViewController? {
         let objectClass = NSClassFromString(name) as? DebugControllerInstantiable.Type

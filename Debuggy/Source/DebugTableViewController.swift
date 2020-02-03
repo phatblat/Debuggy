@@ -8,13 +8,15 @@
 
 import UIKit
 
+/// Top-level screen for the Debug menu
 public class DebugTableViewController: UITableViewController {
 
     lazy var list: [(String, UIViewController)] = {
-        return [(String.styleGuide, DebugUXStyleTableViewController()),
-                (String.strings, StringTableViewController()),
-                (String.debugViews,UIDebugBundleListViewController())
-                ]
+        return [
+            (String.styleGuide, DebugUXStyleTableViewController()),
+            (String.strings, StringTableViewController()),
+            (String.debugViews,UIDebugBundleListViewController())
+        ]
     }()
 
     override public func viewDidLoad() {

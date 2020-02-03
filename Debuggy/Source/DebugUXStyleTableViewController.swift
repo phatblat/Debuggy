@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Style Guide screen
 class DebugUXStyleTableViewController: UITableViewController {
 
     override func viewDidLoad() {

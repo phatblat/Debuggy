@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Strings screen
 class StringTableViewController: UITableViewController {
 
     override func viewDidLoad() {

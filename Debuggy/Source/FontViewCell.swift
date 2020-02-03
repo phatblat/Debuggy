@@ -8,16 +8,12 @@
 
 import UIKit
 
+/// Cell for fonts on Style Guide screen
 class FontViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var fontLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }
 
 extension FontViewCell: DebugCellInstantiable {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Detail view for a UIKit class. Provides use cases (data) and actions (push, present).
 public class UIDebugClassDetailViewController: UITableViewController {
 
     public var debugClassName: String!

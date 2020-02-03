@@ -9,27 +9,30 @@
 import Foundation
 import UIKit
 
+/// List of UIColors to display in the Fonts section of the Style Guide screen.
+// TODO: This belongs in the example app.
 struct DDColor {
-    static let allColors = [("Brand Red", DDColor.brandRed),
-                            ("Brand Red Gradient", DDColor.brandRedGradient),
-                            ("Info Error", DDColor.infoError),
-                            ("Info Error Bkg", DDColor.infoErrorBackground),
-                            ("Info Warning", DDColor.infoWarning),
-                            ("Info Warning Bkg", DDColor.infoWarningBackground),
-                            ("Info Success", DDColor.infoSuccess),
-                            ("Info Success Bkg", DDColor.infoSuccessBackground),
-                            ("Info Info", DDColor.infoInformation),
-                            ("Info Info Bkg", DDColor.infoInformationBackground),
-                            ("Action", DDColor.action),
-                            ("Action Destructive", DDColor.actionDestructive),
-                            ("Selected Row", DDColor.selectedRow),
-                            ("Black", DDColor.black),
-                            ("Gray Lightest", DDColor.grayLightest),
-                            ("Gray Light", DDColor.grayLight),
-                            ("Standard Gray", DDColor.standardGray),
-                            ("Gray", DDColor.gray),
-                            ("Gray Dark", DDColor.grayDark),
-                            ("Placeholder", DDColor.placeholder)
+    static let allColors = [
+        ("Brand Red", DDColor.brandRed),
+        ("Brand Red Gradient", DDColor.brandRedGradient),
+        ("Info Error", DDColor.infoError),
+        ("Info Error Bkg", DDColor.infoErrorBackground),
+        ("Info Warning", DDColor.infoWarning),
+        ("Info Warning Bkg", DDColor.infoWarningBackground),
+        ("Info Success", DDColor.infoSuccess),
+        ("Info Success Bkg", DDColor.infoSuccessBackground),
+        ("Info Info", DDColor.infoInformation),
+        ("Info Info Bkg", DDColor.infoInformationBackground),
+        ("Action", DDColor.action),
+        ("Action Destructive", DDColor.actionDestructive),
+        ("Selected Row", DDColor.selectedRow),
+        ("Black", DDColor.black),
+        ("Gray Lightest", DDColor.grayLightest),
+        ("Gray Light", DDColor.grayLight),
+        ("Standard Gray", DDColor.standardGray),
+        ("Gray", DDColor.gray),
+        ("Gray Dark", DDColor.grayDark),
+        ("Placeholder", DDColor.placeholder)
     ]
 
     static let brandRed = UIColor(rgb: 0xdb011c)

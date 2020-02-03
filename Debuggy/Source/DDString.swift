@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/// List of Strings to display on the Strings screen.
+// TODO: This belongs in the example app.
 struct DDString {
     static let allStrings = [
         ("Main", String.main),
@@ -24,7 +26,7 @@ struct DDString {
         ("Hidden Debug", String.hiddenDebug),
         ("Strings", String.strings),
         ("Debug Views", String.debugViews),
-        ]
+    ]
 }
 
 extension String {

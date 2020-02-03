@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/// List of UIFonts displayed in the Fonts section of the Style Guide screen.
+// TODO: This belongs in the example app.
 struct DDStyle {
     static let allFonts = [
         ("Title 1 (heavy)", DDStyle.title1Font),

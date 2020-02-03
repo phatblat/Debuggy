@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Cell for strings on Strings screen.
 class StringsViewCell: UITableViewCell {
 
     @IBOutlet weak var keyLabel: UILabel!
@@ -15,7 +16,5 @@ class StringsViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
 }

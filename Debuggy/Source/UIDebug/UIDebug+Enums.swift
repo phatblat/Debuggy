@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Table sections on VC details screen.
 enum DetailSection: String, CaseIterable {
     case controller = "Controller"
     case useCase = "Use Case"
@@ -36,5 +37,4 @@ enum DebugTableType: CaseIterable {
         default: return .plain
         }
     }
-
 }

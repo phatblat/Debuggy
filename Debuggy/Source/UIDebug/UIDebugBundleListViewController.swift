@@ -10,6 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+/// Debug Views screen with title "Bundle List"
 public class UIDebugBundleListViewController: UIViewController {
 
     var tableView: UITableView!

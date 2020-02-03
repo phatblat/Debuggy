@@ -8,16 +8,12 @@
 
 import UIKit
 
+/// Cell type used on the Style Guide Screen
 class ColorViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var colorView: UIView!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }
 
 extension ColorViewCell: DebugCellInstantiable {

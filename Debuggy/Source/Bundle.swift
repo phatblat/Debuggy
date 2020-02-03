@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 
+/// Extensions to foundation Bundle class.
 extension Bundle {
 
     /// Returns the Debuggy library resources bundle
@@ -27,5 +28,29 @@ extension Bundle {
         }
 
         return resBundle
+    }
+
+    /// Retrieves a list of names of class in the bundle that implement DebugInstantiable.
+    /// - Parameter classType: Type of class to search for.
+    func retrieveAll<T: DebugInstantiable>(for classType: T.Type) -> [String] {
+        guard let bundlePath = executablePath else {
+            return []
+        }
+
+        var anyClasses: [String] = []
+        var size: UInt32 = 0
+
+        let classes = objc_copyClassNamesForImage(bundlePath, &size)
+
+        for index in 0..<size {
+            if let className = classes?[Int(index)],
+                let name = NSString(utf8String: className) as String? {
+                if NSClassFromString(name) is T.Type {
+                    anyClasses.append(name)
+                }
+            }
+        }
+
+        return anyClasses
     }
 }

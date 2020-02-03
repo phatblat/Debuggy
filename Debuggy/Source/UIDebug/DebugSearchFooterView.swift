@@ -1,5 +1,5 @@
 //
-//  UIDebug+UIViews.swift
+//  DebugSearchFooterView.swift
 //  OpenLink
 //
 //  Created by Vince Davis on 4/4/19.
@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Displays messages such as "No items match your query".
 class DebugSearchFooterView: UIView {
 
     let label: UILabel = UILabel()
