@@ -13,7 +13,7 @@ class DebugUXStyleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = .styleGuide
+        title = .styleGuide
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 70.0

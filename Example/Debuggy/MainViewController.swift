@@ -14,9 +14,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Main" //.main
+        title = "Main" //.main
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Debug", style: .done, target: self, action: #selector(showDebug))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Debug", style: .done, target: self, action: #selector(showDebug))
 
         let centerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 22))
         centerLabel.text = "MainViewController"
@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
 extension MainViewController {
     @objc func showDebug() {
         let vc = DebugTableViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

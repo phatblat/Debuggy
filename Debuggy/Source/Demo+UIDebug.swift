@@ -36,8 +36,8 @@ enum DemoUIDebug: UIDebuggable, CaseIterable {
 
     var list: [String] {
         switch self {
-        case .mainControllers: return self.bundle.retrieveAll(for: UIViewController.self).sorted(by: { $0 < $1 })
-        case .tableCells: return self.bundle.retrieveAll(for: UITableViewCell.self).sorted(by: { $0 < $1 })
+        case .mainControllers: return bundle.retrieveAll(for: UIViewController.self).sorted(by: { $0 < $1 })
+        case .tableCells: return bundle.retrieveAll(for: UITableViewCell.self).sorted(by: { $0 < $1 })
         }
     }
 }

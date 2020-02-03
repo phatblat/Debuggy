@@ -26,27 +26,27 @@ class UIDebugClassListViewController: UIViewController {
     convenience init(for type: DebugTableType, with item: UIDebuggable) {
         self.init()
 
-        self.tableType = type
-        self.debugItem = item
+        tableType = type
+        debugItem = item
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = String(describing: debugItem.classType)
+        title = String(describing: debugItem.classType)
 
         tableView = UITableView(frame: view.bounds, style: tableType.tableStyle)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.frame = self.view.bounds
+        tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.separatorColor = self.navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
+        tableView.separatorColor = navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
         tableView.reloadData()
 
-        self.view.addSubview(tableView)
+        view.addSubview(tableView)
 
         setupSearchController()
 
@@ -71,10 +71,10 @@ class UIDebugClassListViewController: UIViewController {
         let keyboardFrame = keyboardSize.cgRectValue
 
         if Int(searchFooterBottomConstraint.constant) == 0 {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.3) {
                 self.searchFooterBottomConstraint.constant -= (keyboardFrame.height - self.view.safeAreaInsets.bottom)
                 self.view.layoutIfNeeded()
-            })
+            }
         }
     }
 
@@ -90,10 +90,10 @@ class UIDebugClassListViewController: UIViewController {
         let keyboardFrame = keyboardSize.cgRectValue
 
         if Int(searchFooterBottomConstraint.constant) != 0 {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.3) {
                 self.searchFooterBottomConstraint.constant += (keyboardFrame.height - self.view.safeAreaInsets.bottom)
                 self.view.layoutIfNeeded()
-            })
+            }
         }
     }
 
@@ -167,7 +167,7 @@ extension UIDebugClassListViewController: UITableViewDataSource, UITableViewDele
                 className = debugItem.list[indexPath.row]
             }
             let vc = UIDebugClassDetailViewController(with: className)
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -186,7 +186,7 @@ extension UIDebugClassListViewController {
 
         let split = item.components(separatedBy: ".")
         cell.textLabel?.text = split.count > 1 ? split[1] : split[0]
-        cell.textLabel?.textColor = self.navigationController?.navigationBar.tintColor
+        cell.textLabel?.textColor = navigationController?.navigationBar.tintColor
         cell.accessoryType = .disclosureIndicator
 
         return cell
@@ -225,24 +225,24 @@ extension UIDebugClassListViewController {
 
         searchController.searchBar.delegate = self
 
-        self.view.addSubview(searchFooter)
-        if let backgroundColor = self.navigationController?.navigationBar.barTintColor,
-            let textColor = self.navigationController?.navigationBar.tintColor {
+        view.addSubview(searchFooter)
+        if let backgroundColor = navigationController?.navigationBar.barTintColor,
+            let textColor = navigationController?.navigationBar.tintColor {
             searchFooter.update(backgroundColor: backgroundColor, textColor: textColor)
         }
 
         searchFooter.translatesAutoresizingMaskIntoConstraints = false
         searchFooter.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        searchFooter.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
-        searchFooter.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        searchFooter.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        searchFooter.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
 
         if #available(iOS 11, *) {
-            //searchFooter.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
-            searchFooterBottomConstraint = searchFooter.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+            //searchFooter.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+            searchFooterBottomConstraint = searchFooter.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
             searchFooterBottomConstraint.isActive = true
         } else {
-            //searchFooter.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
-            searchFooterBottomConstraint = searchFooter.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
+            //searchFooter.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+            searchFooterBottomConstraint = searchFooter.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
             searchFooterBottomConstraint.isActive = true
         }
     }

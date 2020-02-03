@@ -16,19 +16,19 @@ public class UIDebugClassDetailViewController: UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Options"
+        title = "Options"
 
         selectedUseCase = UIDebug.getUseCases(for: debugClassName).first
 
-        self.tableView.separatorColor = self.navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
+        tableView.separatorColor = navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
 
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
     convenience init(with className: String) {
         self.init(style: .grouped)
 
-        self.debugClassName = className
+        debugClassName = className
     }
 
     // MARK: - Table view data source
@@ -67,7 +67,7 @@ public class UIDebugClassDetailViewController: UITableViewController {
             return cell
         }()
 
-        cell.textLabel?.textColor = self.navigationController?.navigationBar.tintColor
+        cell.textLabel?.textColor = navigationController?.navigationBar.tintColor
 
         switch indexPath.section {
         case 0:
@@ -142,6 +142,6 @@ extension UIDebugClassDetailViewController {
 
         let navigationController = UINavigationController(rootViewController: controller)
         controller.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: controller, action: #selector(dismissModalAnimated))
-        self.present(navigationController, animated: true, completion: nil)
+        present(navigationController, animated: true, completion: nil)
     }
 }

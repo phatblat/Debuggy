@@ -11,13 +11,13 @@ import UIKit
 
 extension UIViewController {
     @objc func dismissModalAnimated() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
 public extension Bundle {
     func retrieveAll<T: DebugInstantiable>(for classType: T.Type) -> [String] {
-        guard let bundlePath = self.executablePath else {
+        guard let bundlePath = executablePath else {
             return []
         }
 

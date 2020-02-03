@@ -22,25 +22,24 @@ public class UIDebugBundleListViewController: UIViewController {
 
     public convenience init(with list: [UIDebuggable]) {
         self.init()
-
-        self.debugList = list
+        debugList = list
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Bundle List"
+        title = "Bundle List"
 
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.frame = self.view.bounds
+        tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.separatorColor = self.navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
+        tableView.separatorColor = navigationController?.navigationBar.barTintColor == UIColor.black ? .clear : .gray
         tableView.reloadData()
 
-        self.view.addSubview(tableView)
+        view.addSubview(tableView)
         setupSearchController()
     }
 }
@@ -71,7 +70,7 @@ extension UIDebugBundleListViewController: UITableViewDataSource, UITableViewDel
         }
 
         cell.textLabel?.text = "\(item.displayName) (\(item.list.count))"
-        cell.textLabel?.textColor = self.navigationController?.navigationBar.tintColor
+        cell.textLabel?.textColor = navigationController?.navigationBar.tintColor
         cell.accessoryType = .disclosureIndicator
 
         return cell
@@ -84,19 +83,19 @@ extension UIDebugBundleListViewController: UITableViewDataSource, UITableViewDel
 
         if debugItem.classType is UIViewController.Type {
             let vc = UIDebugClassListViewController(for: .classList, with: debugItem)
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
             return
         }
 
         if debugItem.classType is UITableViewCell.Type {
             let vc = UIDebugClassListViewController(for: .classSectionList, with: debugItem)
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
             return
         }
 
         if debugItem.classType is UIView.Type {
             let vc = UIDebugClassCollectionViewController(with: debugItem)
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
             return
         }
     }
@@ -116,21 +115,21 @@ extension UIDebugBundleListViewController {
 
         searchController.searchBar.delegate = self
 
-        self.view.addSubview(searchFooter)
-        if let backgroundColor = self.navigationController?.navigationBar.barTintColor,
-            let textColor = self.navigationController?.navigationBar.tintColor {
+        view.addSubview(searchFooter)
+        if let backgroundColor = navigationController?.navigationBar.barTintColor,
+            let textColor = navigationController?.navigationBar.tintColor {
             searchFooter.update(backgroundColor: backgroundColor, textColor: textColor)
         }
 
         searchFooter.translatesAutoresizingMaskIntoConstraints = false
         searchFooter.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        searchFooter.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
-        searchFooter.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        searchFooter.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        searchFooter.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
 
         if #available(iOS 11, *) {
-            searchFooter.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+            searchFooter.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
         } else {
-            searchFooter.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+            searchFooter.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         }
     }
 

@@ -17,26 +17,26 @@ class UIDebugClassCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = .lightGray
+        view.backgroundColor = .lightGray
 
-        self.title = String(describing: debugItem.classType)
+        title = String(describing: debugItem.classType)
 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        layout.itemSize = CGSize(width: self.view.frame.size.width - 30, height: 400)
+        layout.itemSize = CGSize(width: view.frame.size.width - 30, height: 400)
 
-        let collectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        let collectionView: UICollectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.backgroundColor = .lightGray
-        self.view.addSubview(collectionView)
+        view.addSubview(collectionView)
     }
 
     convenience init(with item: UIDebuggable) {
         self.init()
 
-        self.debugItem = item
+        debugItem = item
     }
 }
 
@@ -80,7 +80,7 @@ extension UIDebugClassCollectionViewController: UICollectionViewDataSource, UICo
         stackView.addArrangedSubview(classLabel)
 
         classLabel.text = className
-        classLabel.textColor = self.navigationController?.navigationBar.tintColor
+        classLabel.textColor = navigationController?.navigationBar.tintColor
 
         if let view = UIDebug.instantiateView(named: item) {
             view.heightAnchor.constraint(equalToConstant: view.frame.size.height).isActive = true
@@ -100,7 +100,7 @@ extension UIDebugClassCollectionViewController: UICollectionViewDataSource, UICo
 
         let notSetupLabel = UILabel()
         notSetupLabel.text = "Not Setup"
-        notSetupLabel.textColor = self.navigationController?.navigationBar.tintColor
+        notSetupLabel.textColor = navigationController?.navigationBar.tintColor
         notSetupLabel.font = .boldSystemFont(ofSize: 14)
         stackView.addArrangedSubview(notSetupLabel)
 
@@ -113,16 +113,16 @@ extension UIDebugClassCollectionViewController: UICollectionViewDelegateFlowLayo
 
         let className = debugItem.list[indexPath.row]
         if let view = UIDebug.instantiateView(named: className) {
-            let size = CGSize(width: self.view.frame.size.width - 30, height: view.frame.size.height + 30)
+            let size = CGSize(width: view.frame.size.width - 30, height: view.frame.size.height + 30)
             return size
         }
 
         if let button = UIDebug.instantiateButton(named: className) {
-            let size = CGSize(width: self.view.frame.size.width - 30, height: button.frame.size.height + 30)
+            let size = CGSize(width: view.frame.size.width - 30, height: button.frame.size.height + 30)
             return size
         }
 
-        let size = CGSize(width: self.view.frame.size.width - 30, height: 60)
+        let size = CGSize(width: view.frame.size.width - 30, height: 60)
         return size
     }
 

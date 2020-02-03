@@ -13,7 +13,7 @@ class StringTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = .strings
+        title = .strings
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120

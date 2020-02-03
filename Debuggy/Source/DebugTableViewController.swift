@@ -20,7 +20,7 @@ public class DebugTableViewController: UITableViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = .hiddenDebug
+        title = .hiddenDebug
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -53,9 +53,9 @@ public class DebugTableViewController: UITableViewController {
         if indexPath.row == 2 {
             let debugList = DemoUIDebug.allCases as [UIDebuggable]
             let vc = UIDebugBundleListViewController(with: debugList)
-            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         } else {
-            self.navigationController?.pushViewController(item.1, animated: true)
+            navigationController?.pushViewController(item.1, animated: true)
         }
     }
 }
