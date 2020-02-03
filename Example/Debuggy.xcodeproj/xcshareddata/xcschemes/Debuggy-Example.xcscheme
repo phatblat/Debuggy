@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1130"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "Debuggy.app"
+               BuildableName = "Debuggy_Example.app"
                BlueprintName = "Debuggy_Example"
                ReferencedContainer = "container:Debuggy.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Debuggy.app"
+            BuildableName = "Debuggy_Example.app"
             BlueprintName = "Debuggy_Example"
             ReferencedContainer = "container:Debuggy.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Debuggy.app"
+            BuildableName = "Debuggy_Example.app"
             BlueprintName = "Debuggy_Example"
             ReferencedContainer = "container:Debuggy.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "Debuggy.app"
+            BuildableName = "Debuggy_Example.app"
             BlueprintName = "Debuggy_Example"
             ReferencedContainer = "container:Debuggy.xcodeproj">
          </BuildableReference>
